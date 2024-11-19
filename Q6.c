@@ -1,11 +1,27 @@
 #include <stdio.h>
 
-long long max(long long a, long long b) {
+/*long long max(long long a, long long b) {
     return (a > b) ? a : b;
 }
+I can't understand what this code is for.
+*/
 
 long long number_spiral(long long y, long long x) {
-    //write your code here
+    int matrix[y][x];
+    int top = 0;
+    int bottom = x-1;
+    int left = 0;
+    int right = y-1;
+    int elements = 1;
+    while (elements <= y*x)
+    {
+        for(int i = left; i <= right; i++)
+        {
+            matrix[top][i] = elements;
+            elements++;
+        }
+    }
+    
 }
 
 int main() {
